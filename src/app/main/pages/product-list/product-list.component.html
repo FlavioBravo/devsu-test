@@ -1,0 +1,23 @@
+<div class="product-list__container">
+  <div class="product-list__menu">
+    <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <input
+        type="text"
+        placeholder="Search..."
+        class="product-list__input"
+        formControlName="search"
+      />
+    </form>
+    <button class="product-list__btn" routerLink="/productos/crear-editar">
+      Agregar
+    </button>
+  </div>
+  <div class="product-list__table">
+    <app-table
+      [list]="productList"
+      (editItem)="editProduct($event)"
+      (removeItem)="deleteProduct($event)"
+    ></app-table>
+    <app-pagination [total]="productList.length"></app-pagination>
+  </div>
+</div>

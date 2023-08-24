@@ -1,0 +1,14 @@
+.header {
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo {
+        display: flex;
+        width: 256px;
+        height: 112px;
+    }
+}
