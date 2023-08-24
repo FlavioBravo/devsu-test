@@ -1,0 +1,123 @@
+.product-ae {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 4px;
+    width: 50vw;
+  }
+
+  &__title-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 24px 0;
+    border-bottom: 1px solid black;
+  }
+
+  &__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__form-box {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  &__form-control {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+  }
+
+  &__label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 16px;
+  }
+
+  &__input {
+    display: flex;
+    height: 30px;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+
+  &__error-msg {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: red;
+    margin-top: 8px;
+  }
+
+  &__error-input {
+    color: red;
+    border: 1px solid red;
+  }
+
+  &__button-box {
+    display: flex;
+    padding: 48px 0;
+  }
+
+  &__restart-btn {
+    display: flex;
+    padding: 16px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #eee;
+    background-color: #eee;
+    color: #0f265c;
+    &:hover {
+      background-color: #ddd;
+      border: 1px solid #ddd;
+      color: inherit;
+    }
+  }
+
+  &__submit-btn {
+    display: flex;
+    padding: 16px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #fd0;
+    background-color: #fd0;
+    color: #0f265c;
+    margin-left: 64px;
+    &:hover {
+      background-color: #ffce03;
+      border: 1px solid #ffce03;
+      color: inherit;
+    }
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  input {
+    background-color: #eee;
+  }
+}

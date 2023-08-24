@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 16px;
+}
+.pagination {
+    &__result {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__select {
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        padding: 4px 8px;
+    }
+}

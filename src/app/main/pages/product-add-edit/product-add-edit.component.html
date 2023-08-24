@@ -1,0 +1,170 @@
+<form
+  [formGroup]="productForm"
+  class="product-ae__container"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="product-ae__title-box">
+    <h3 class="product-ae__title">Formulario de Registro</h3>
+  </div>
+  <div class="product-ae__form-box">
+    <div
+      class="product-ae__form-control"
+      [ngClass]="{
+        'disabled': isEditedProduct
+      }"
+    >
+      <label for="id" class="product-ae__label">ID</label>
+      <input
+        type="text"
+        name="id"
+        id="id"
+        class="product-ae__input"
+        formControlName="id"
+        [ngClass]="{
+          'product-ae__error-input':
+            productForm.controls['id'].touched &&
+            productForm.controls['id'].invalid
+        }"
+      />
+      <span
+        *ngIf="
+          productForm.controls['id'].touched &&
+          productForm.controls['id'].invalid
+        "
+        class="product-ae__error-msg"
+        >ID no valido</span
+      >
+    </div>
+    <div class="product-ae__form-control">
+      <label for="name" class="product-ae__label">Nombre</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="product-ae__input"
+        formControlName="name"
+        [ngClass]="{
+          'product-ae__error-input':
+            productForm.controls['name'].touched &&
+            productForm.controls['name'].invalid
+        }"
+      />
+      <span
+        *ngIf="
+          productForm.controls['name'].touched &&
+          productForm.controls['name'].invalid
+        "
+        class="product-ae__error-msg"
+        >Nombre no valido</span
+      >
+    </div>
+    <div class="product-ae__form-control">
+      <label for="description" class="product-ae__label">Descripción</label>
+      <input
+        type="text"
+        name="description"
+        id="description"
+        class="product-ae__input product-ae__error-input"
+        formControlName="description"
+        [ngClass]="{
+          'product-ae__error-input':
+            productForm.controls['description'].touched &&
+            productForm.controls['description'].invalid
+        }"
+      />
+      <span
+        *ngIf="
+          productForm.controls['description'].touched &&
+          productForm.controls['description'].invalid
+        "
+        class="product-ae__error-msg"
+        >Descripción no valida</span
+      >
+    </div>
+    <div class="product-ae__form-control">
+      <label for="logo" class="product-ae__label">Logo</label>
+      <input
+        type="text"
+        name="logo"
+        id="logo"
+        class="product-ae__input product-ae__error-input"
+        formControlName="logo"
+        [ngClass]="{
+          'product-ae__error-input':
+            productForm.controls['logo'].touched &&
+            productForm.controls['logo'].invalid
+        }"
+      />
+      <span
+        *ngIf="
+          productForm.controls['logo'].touched &&
+          productForm.controls['logo'].invalid
+        "
+        class="product-ae__error-msg"
+        >logo no valido</span
+      >
+    </div>
+    <div class="product-ae__form-control">
+      <label for="date_release" class="product-ae__label"
+        >Fecha Liberación</label
+      >
+      <input
+        type="date"
+        name="date_release"
+        id="date_release"
+        class="product-ae__input"
+        formControlName="date_release"
+        [ngClass]="{
+          'product-ae__error-input':
+            productForm.controls['date_release'].touched &&
+            productForm.controls['date_release'].invalid
+        }"
+      />
+      <span
+        *ngIf="
+          productForm.controls['date_release'].touched &&
+          productForm.controls['date_release'].invalid
+        "
+        class="product-ae__error-msg"
+        >Fecha liberación no valida</span
+      >
+    </div>
+    <div class="product-ae__form-control disabled">
+      <label for="date_revision" class="product-ae__label"
+        >Fecha Revisión</label
+      >
+      <input
+        type="date"
+        name="date_revision"
+        id="date_revision"
+        class="product-ae__input"
+        formControlName="date_revision"
+        [ngClass]="{
+          'product-ae__error-input':
+            productForm.controls['date_revision'].touched &&
+            productForm.controls['date_revision'].invalid
+        }"
+      />
+      <span
+        *ngIf="
+          productForm.controls['date_revision'].touched &&
+          productForm.controls['date_revision'].invalid
+        "
+        class="product-ae__error-msg"
+        >Fecha revisión no valida</span
+      >
+    </div>
+  </div>
+  <div class="product-ae__button-box">
+    <button type="button" class="product-ae__restart-btn" routerLink="/productos/lista">
+      Reiniciar
+    </button>
+    <button
+      class="product-ae__submit-btn"
+      type="submit"
+      [disabled]="productForm.invalid"
+    >
+      Enviar
+    </button>
+  </div>
+</form>
