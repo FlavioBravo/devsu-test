@@ -81,8 +81,8 @@
           />
         </svg>
         <div class="table__icons-dropdown" [ngClass]="{ hidden: !item.open }">
-          <span (click)="edit(item)">Editar</span>
-          <span (click)="delete(item.id)">Eliminar</span>
+          <span (click)="edit(item)" id="editOption-{{i}}">Editar</span>
+          <span (click)="delete(item.id)" id="removeOption-{{i}}">Eliminar</span>
         </div>
       </div>
     </td>

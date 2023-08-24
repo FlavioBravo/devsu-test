@@ -10,9 +10,6 @@ export class TableComponent {
   @Input() list: Product[] = [];
   @Output() removeItem = new EventEmitter<string>();
   @Output() editItem = new EventEmitter<Product>();
-  isDropdownOpen = false;
-
-  constructor() {}
 
   edit(item: Product) {
     this.editItem.emit(item);

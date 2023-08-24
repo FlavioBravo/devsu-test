@@ -58,6 +58,10 @@ export class ProductAddEditComponent implements OnInit {
     private productService: ProductService,
     private router: Router
   ) {
+    this.checkoutFormAction();
+  }
+
+  checkoutFormAction() {
     const data =
       this.router?.getCurrentNavigation()?.extras?.state?.['response'];
     if (data) {

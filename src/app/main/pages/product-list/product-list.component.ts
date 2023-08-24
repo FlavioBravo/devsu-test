@@ -32,7 +32,6 @@ export class ProductListComponent implements OnInit {
   editProduct(item: Product) {
     item.date_release = getYYYYMMDDFormat(item.date_release);
     item.date_revision = getYYYYMMDDFormat(item.date_revision);
-    console.log(item);
     this.router.navigate(['productos/crear-editar'], {
       state: {
         response: { item },
